@@ -15,19 +15,6 @@ class HomePageState extends State<HomePage> {
           backgroundColor: Color.fromARGB(210, 251, 116, 62),
           title: Text("Home"),
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              label: 'Settings',
-            )
-          ],
-          backgroundColor: Color.fromARGB(255, 66, 222, 225),
-        ),
         body: Column(
           children: [
             InkWell(
@@ -48,7 +35,7 @@ class HomePageState extends State<HomePage> {
                     ))),
             InkWell(
               onTap: () {
-                print('press');
+                Navigator.pushNamed(context, "/eventsPage");
               },
               child: Container(
                   margin: EdgeInsets.only(top: 30),
@@ -62,6 +49,16 @@ class HomePageState extends State<HomePage> {
                     ),
                   )),
             ),
+            Container(
+              margin: EdgeInsets.only(left: 340, top: 200),
+              child: FlatButton(
+                onPressed: () {
+                  // Add your onPressed code here!
+                  Navigator.pushNamed(context, "/friendsPage");
+                },
+                child: Icon(Icons.contacts),
+              ),
+            )
           ],
         ));
   }

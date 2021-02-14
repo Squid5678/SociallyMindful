@@ -5,11 +5,13 @@ class Person {
   String name;
   int age;
 
+  static String tempName;
   var interests = [false, false, false, false, false, false];
   var botName;
   var email; //used for login authentication
   var password; //used for login authentication
   var botAge;
+  String discordTag;
   int zipCode;
   File image;
 
@@ -25,6 +27,9 @@ class Person {
 //Store bots on this
   static var matches = List();
 
+//People you have said yes too, now are on your friends list
+  static var acceptedMatches = List();
+
   static int numGen() {
     int num;
     final random = new Random();
@@ -37,6 +42,28 @@ class Person {
     final random = new Random();
     num = random.nextInt((3000) + 6000);
     this.zipCode = num;
+  }
+
+  static String generateName() {
+    var names = ["john", "henry", "paul", "billy", "tom", "jared", "garfield"];
+    var random = new Random();
+
+    tempName = names[random.nextInt(names.length)];
+
+    return tempName;
+  }
+
+  static String generateEmail() {
+    var mailSuffixes = [
+      "@yahoo.com",
+      "@gmail.com",
+      "@hotmail.com",
+      "@outlook.com"
+    ];
+
+    var random = new Random();
+
+    return tempName + mailSuffixes[random.nextInt(mailSuffixes.length)];
   }
 
   String getInterests() {

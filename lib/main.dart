@@ -5,6 +5,9 @@ import "./homePage.dart";
 import "./profilePage.dart";
 import "./registrationPage.dart";
 import 'RegistrationPage2.dart';
+import 'event.dart';
+import 'eventsPage.dart';
+import 'friends.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -15,6 +18,9 @@ void main() {
       "/profile": (context) => new ProfilePage(),
       "/registration": (context) => new RegistrationPage(),
       "/registration2": (context) => new RegistrationPage2(),
+      "/eventsPage": (context) => new EventsPage(),
+      "/friendsPage": (context) => new FriendsPage(),
+      "/event": (context) => new EventPage(),
     },
   ));
 }
