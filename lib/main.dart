@@ -4,7 +4,7 @@ import "./loginPage.dart";
 import "./homePage.dart";
 import "./profilePage.dart";
 import "./registrationPage.dart";
-import 'package:camera/camera.dart';
+import 'RegistrationPage2.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -14,6 +14,7 @@ void main() {
       "/home": (context) => new HomePage(),
       "/profile": (context) => new ProfilePage(),
       "/registration": (context) => new RegistrationPage(),
+      "/registration2": (context) => new RegistrationPage2(),
     },
   ));
 }
